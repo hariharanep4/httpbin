@@ -25,7 +25,7 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag hariharanep4/httpbin:$(date +%s)
+      run: docker build . --file Dockerfile --tag hariharanep4/httpbin:v1
       
     - name: Push into Docker Hub
-      run: docker push hariharanep4/hariharanep4/httpbin:$(date +%s)
+      run: docker push hariharanep4/hariharanep4/httpbin:v1
